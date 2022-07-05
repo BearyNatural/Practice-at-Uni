@@ -1,0 +1,17 @@
+#user input
+name = input("What is the user's first name?")
+surname = input("What is user's surname?")
+studentid = input("What is user's studentID?")
+dob = input("What is the user's date of birth? use format yyyy")
+current_year = input("What is the current year? use format yyyy")
+
+#age of user calulation
+age = int(current_year) - int(dob)
+
+#test
+print(name)
+print(surname)
+print(studentid)
+print(dob)
+print(current_year)
+print(f"{name} {surname}, {age} years old")
