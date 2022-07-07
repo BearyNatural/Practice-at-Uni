@@ -13,14 +13,25 @@
 
 
 
+
 line = 4
 lines = ''
 for number in range(0, line):
     lines += 'x'
-    ''.join(lines)
     print(lines)
-str(lines)
-x = 'x'
-for x in range(0, line):
-    del x[-1]
+print(lines)
+list(lines)
+print(lines)
+print(type(lines))
+for nu in range(0, line):
+    x = lines.count('x')
+    x2 = x - 1
+    # print(x2 * x)
+    print(x2)
     print(lines)
+print(lines)
+
+# x = 'x'
+# for x in range(0, line):
+#     del x[-1]
+#     print(lines)
