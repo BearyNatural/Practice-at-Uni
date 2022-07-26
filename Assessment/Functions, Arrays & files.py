@@ -16,13 +16,20 @@ while True:
     if new != 'y':
         break
 
+
+def Average(bunnies_got_rabies):
+    return sum(bunnies_got_rabies) / len(bunnies_got_rabies)
+average = Average(bunnies_got_rabies)
+# print(f"Average rolls: {average}")
+
 # sum
 total = sum(bunnies_got_rabies)
 
-# average
-average = total / len(bunnies_got_rabies)
+# # average
+# average = total / len(bunnies_got_rabies)
 
 # final prints
 print(f"Average rolls: {average}")
 print(f"Total of rolls: {total}")
 print(f"Stored dice rolls: {bunnies_got_rabies}")
+
