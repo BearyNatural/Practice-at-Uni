@@ -2,7 +2,7 @@
 select name 
 from sys.databases
 
-create database kayhoweDB
+create database kayhoweDB;
 
 use kayhoweDB;
 create table COMPLAINT(
@@ -13,6 +13,12 @@ create table COMPLAINT(
     ResolutionDetails NVARCHAR(500),
     PRIMARY KEY (FullName)
 );
+
+select name
+from kayhoweDB
+
+use kayhoweDB
+create table testitesttest;
 
 DELETE FROM COMPLAINT;
 
