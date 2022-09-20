@@ -14,11 +14,11 @@ create table COMPLAINT(
     PRIMARY KEY (FullName)
 );
 
-select name
-from kayhoweDB
-
+--get list of tables in database
 use kayhoweDB
-create table testitesttest;
+SELECT TABLE_NAME 
+FROM INFORMATION_SCHEMA.TABLES 
+WHERE TABLE_TYPE = 'BASE TABLE';
 
 DELETE FROM COMPLAINT;
 
