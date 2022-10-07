@@ -1,0 +1,59 @@
+QUIZ 6  Question 7
+Write a query to do the following.
+Using at least 1 full outer join, list all actors and all movies (all columns)
+Where actors have been cast in a movie join the actor and movie on the same line of the result set.
+Where an actor hasn't been cast, or a movie hasn't had any castings make sure to list these with null values filling the columns for which there is no data.
+Once written, execute your query.
+Add a screenshot of both your query and your result sets below.
+
+QUIZ 6  Question 8
+Part 1:
+Write a query that lists the actorno of all male actors who have had 1 and only 1 casting
+( i.e. a list of the actorno of all 'one hit wonder' actors) 
+Part 2:
+Write a query that uses your query from part 1 as a sub query.
+The query must list all the columns for every movies in which a male 'one hit wonder' actor acted
+This query must use the IN operator.
+Once written, execute your (part 2) query.
+Add a screenshot of both your query and your result sets below.
+
+QUIZ 6 Question 9
+Write a query to do the following:
+For all PG movies with a runtime less than 120 minutes provide a listing of:
+- the movie title
+-  a calculated column which is a product  (multiplication) of the TMDB_SCORE X TMDB_VOTES
+Once written, execute your query.
+Add a screenshot of both your query and your result sets below.
+
+QUIZ 6 Question 10
+Write a query to do the following:
+For each BIRTHDATE in the actor table list the  following columns ( use the built in DATENAME and DATEPART functions )
+BIRTHDATE (the datevalue as it appears in the ACTOR table)
+DayOfWeek (e.g. Monday)
+DayOfMonth (e.g. 25)
+MonthName (e.g. March)
+MonthNum (e.g. 3)
+Year (e.g. 2022)
+Your result set should have column headers like this, and the result set should be formatted as shown in the screen shot below but rows shown below will vary.
+Screen Shot 2022-06-28 at 1.11.22 pm-1.png
+Once written, execute your query.
+
+QUIZ 6 Question 11
+Provide a brief definition and an example (from the database used in this assessment) of the following terms:
+Table
+Column
+Row
+
+QUIZ 6 Question 12
+Briefly explain the difference between a Database and a DBMS.
+
+QUIZ 6 Question 13
+Provide a brief definition, and an example (from the database used in this assessment) of the following terms:
+Primary Key (PK):
+Foreign Key (FK):
+Constraint:
+
+QUIZ 6 Question 14
+Provide a brief definition of the following terms, including the Command Keywords used in each (e.g. SELECT is part of DML)
+Data Definition Language (DDL) 
+Data Manipulation Language (DML)
