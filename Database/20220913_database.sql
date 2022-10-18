@@ -1,4 +1,15 @@
 -- shift+ctrl+e = execute
+select * 
+from sys.databases
+
+SELECT *
+FROM SYSOBJECTS
+WHERE XTYPE = 'MOVIE'; --TABLE NAME, OR PK FOR PRIMARY KEY ETC;
+GO
+
+SELECT *
+FROM INFORMATION_SCHEMA.VIEWS; --OR TABLES, ETC; SAME AS ABOVE CODE;
+
 select name 
 from sys.databases
 
