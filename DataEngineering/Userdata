@@ -1,0 +1,16 @@
+#!/bin/bash
+
+sudo apt update
+sudo apt upgrade -y 
+
+sudo apt install apache2 -y
+sudo systemctl enable apache2
+sudo systemctl start apache2
+sudo ufw enable
+sudo ufw allow ssh
+sudo ufw allow 'Apache'
+sudo apt install net-tools -y
+
+#see /var/www/html for website content
+#
+# https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/AccessingInstancesLinux.html
