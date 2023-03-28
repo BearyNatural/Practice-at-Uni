@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>My Website</title>
+    <style>
+      /* Popup container */
+      .popup {
+        display: none;
+        position: fixed;
+        z-index: 1;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        overflow: auto;
+        background-color: rgba(0,0,0,0.4);
+      }
+      
+      /* Popup content */
+      .popup-content {
+        background-color: #fefefe;
+        margin: 15% auto;
+        padding: 20px;
+        border: 1px solid #888;
+        width: 80%;
+      }
+      
+      /* Close button */
+      .close {
+        color: #aaaaaa;
+        float: right;
+        font-size: 28px;
+        font-weight: bold;
+      }
+      
+      .close:hover,
+      .close:focus {
+        color: #000;
+        text-decoration: none;
+        cursor: pointer;
+      }
+      
+      /* Table styling */
+      table {
+        border-collapse: collapse;
+        width: 80%;
+        margin: 0 auto;
+      }
+      
+      th, td {
+        padding: 8px;
+        text-align: center;
+        border-bottom: 1px solid #ddd;
+      }
+      
+      th {
+        background-color: #f2f2f2;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Welcome to my website!</h1>
+    
+    <!-- Table of options -->
+    <table>
+      <tr>
+        <td><button onclick="openForm('option1-form')">Option 1</button></td>
+        <td><button onclick="openForm('option2-form')">Option 2</button></td>
+      </tr>
+      <tr>
+        <td><button onclick="openForm('option3-form')">Option 3</button></td>
+        <td><button onclick="openForm('option4-form')">Option 4</button></td>
+      </tr>
+    </table>
+    
+    <!-- Option 1 form -->
+    <div id="option1-form" class="popup">
+      <div class="popup-content">
+        <span class="close" onclick="closeForm('option1-form')">&times;</span>
+        <h2>Option 1 Form</h2>
+        <form action="submit_option1.php" method="POST">
+          <label for="name">Name:</label>
+          <input type="text" id="name" name="name" required><br>
+
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" required><br>
+
+          <label for="message">Message:</label>
+          <textarea id="message" name="message" rows="5" required></textarea><br>
+
+          <input type="submit" value="Submit">
+        </form>
+      </div>
+    </div>
+
+    <!-- Option 2 -->
+      <div id="option2-form" class="popup">
+        <div class="popup-content">
+          <span class="close" onclick="closeForm('option2-form')">&times;</span>
+          <h2>Option 2 Form</h2>
+          <form action="submit_option2.php" method="POST">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required><br>
+  
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required><br>
+  
+            <label for="phone">Phone:</label>
+            <input type="tel" id="phone" name="phone" required><br>
+  
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" rows="5" required></textarea><br>
+  
+            <input type="submit" value="Submit">
+          </form>
+        </div>
+      </div>
+        
+      <!-- Option 3 -->
+      <div id="option3-form" class="popup">
+        <div class="popup-content">
+          <span class="close" onclick="closeForm('option3-form')">&times;</span>
+          <h2>Option 3 Form</h2>
+          <form action="submit_option3.php" method="POST">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required><br>
+  
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required><br>
+  
+            <label for="phone">Phone:</label>
+            <input type="tel" id="phone" name="phone" required><br>
+  
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" rows="5" required></textarea><br>
+  
+            <input type="submit" value="Submit">
+          </form>
+        </div>
+      </div>
+      
+      <!-- Option 4 -->
+      <div id="option4-form" class="popup">
+        <div class="popup-content">
+          <span class="close" onclick="closeForm('option4-form')">&times;</span>
+          <h2>Option 4 Form</h2>
+          <form action="submit_option4.php" method="POST">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required><br>
+  
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required><br>
+  
+            <label for="phone">Phone:</label>
+            <input type="tel" id="phone" name="phone" required><br>
+  
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" rows="5" required></textarea><br>
+  
+            <input type="submit" value="Submit">
+          </form>
+        </div>
+      </div>
+
+          
+    <!-- JavaScript code to handle popup form -->
+    <script>
+      function openForm() {
+        document.getElementById("option1-form").style.display = "block";
+      }
+      
+      function closeForm() {
+        document.getElementById("option1-form").style.display = "none";
+      }
+    </script>
+
+<script>
+  function openForm() {
+    document.getElementById("option2-form").style.display = "block";
+  }
+  
+  function closeForm() {
+    document.getElementById("option2-form").style.display = "none";
+  }
+</script>
+
+<script>
+  function openForm() {
+    document.getElementById("option3-form").style.display = "block";
+  }
+  
+  function closeForm() {
+    document.getElementById("option3-form").style.display = "none";
+  }
+</script>
+
+<script>
+  function openForm() {
+    document.getElementById("option4-form").style.display = "block";
+  }
+  
+  function closeForm() {
+    document.getElementById("option4-form").style.display = "none";
+  }
+</script>
+  </body>
+
+  <div>
+    <button id="option1" onclick="showForm('form1')">Option 1</button>
+    <button id="option2" onclick="showForm('form2')">Option 2</button>
+  </div>
+
+  <script>
+    // Get the buttons by their IDs
+    var option1Btn = document.getElementById("option1");
+    var option2Btn = document.getElementById("option2");
+  
+    // Add event listeners to the buttons
+    option1Btn.addEventListener("click", function() {
+      alert("Option 1 form will appear here!"); // Replace with your popup form code
+    });
+  
+    option2Btn.addEventListener("click", function() {
+      alert("Option 2 form will appear here!"); // Replace with your popup form code
+    });
+  </script>
+  
+  
+</html>
