@@ -23,6 +23,44 @@
  			font-family: Sans-Serif;
   			font-size: 10px;
             color: black;
+		} 
+        /* Popup container */
+        .popup-form {
+            position: relative;
+            display: inline-block;
+			overflow: auto;
+            transition: box-shadow .35s ease !important;  
+            cursor: pointer;  
+        }
+        /* Popup content */
+        .popup-form-content {
+            top: 50%;
+            left: 50%;
+            width: 400px;
+            height: 500px;
+            z-index: 2;
+            text-align: center;
+            padding: 10px;
+            border-radius: 5px;
+            background: #FAE033;
+            z-index: 1;
+        }
+        .close {
+            right: 20px;
+            top: 20px;
+            width: 30px;
+            height: 30px;
+            color: rgb(63, 18, 18);
+			float: right;
+            font-size: 30px;
+            border-radius: 50%;
+            padding: 2px 5px 7px 5px;
+            cursor: pointer; 
+        }
+		.close:hover, .close:focus {
+			color: #000;
+			text-decoration: none;
+			cursor: pointer;
 		}
         .footer {
             position: fixed;
@@ -33,81 +71,6 @@
             font-size: 10px;
             color: grey;
             text-align: center;
-        } 
-        /* Popup container */
-        .popup-form {
-            position: relative;
-            display: inline-block;
-			overflow: auto;
-            transition: box-shadow .35s ease !important;  
-            cursor: pointer;  
-        }
-        .popup-form:active {
-            background-color: #c5e8ed;
-            color: black;
-        }
-        /* Popup content */
-        .popup .content {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%,-150%) scale(0);
-            width: 350px;
-            height: 430px;
-            z-index: 2;
-            text-align: center;
-            padding: 10px;
-            border-radius: 5px;
-            background: #FAE033;
-            z-index: 1;
-        }
-        .popup.active .content {
-            transition: all 300ms ease-in-out;
-            transform: translate(-50%,-50%) scale(1);
-        }
-        .popup .close-btn {
-            position: absolute;
-            right: 20px;
-            top: 20px;
-            width: 30px;
-            height: 30px;
-            color: white;
-            font-size: 30px;
-            border-radius: 50%;
-            padding: 2px 5px 7px 5px;
-            background: #237be6;
-            cursor: pointer; 
-        }        
-        .input-field .validate {
-            padding: 20px;
-            font-size: 16px;
-            border-radius: 5px;
-            border: none;
-            margin-bottom: 15px;
-            color: #000000;
-            background: #ffffff;
-            border: 2px solid rgb(214, 214, 214);
-            width: 270px;
-            outline: none;
-        }
-        .submit-button {
-            color: white;
-            font-size: 18px;
-            font-weight: 500;
-            margin-top: 20px;
-            padding: 15px 40px;
-            border-radius: 5px;
-            border: none;
-            background: #05438f;
-            transition: box-shadow .35s ease !important;
-            outline: none;
-            cursor: pointer;        
-        }
-        .submit-button:active{
-            background: linear-gradient(145deg,#222222, #292929);
-            border: none;
-            outline: none;
-            cursor: pointer; 
         }
         
     </style> 
@@ -123,7 +86,7 @@
         </tr>
         <tr>
         	<td width=20% align=center></td>
-            <td width=20% align=center style="font-family: Sans-Serif; font-size: 20; font-weight: bold; color: #FFFFFFF;">  </a></td>
+            <td width=20% align=center style="font-family: Sans-Serif; font-size: 20; font-weight: bold; color: black;">  </a></td>
             <td width=20% align=center></td>
         </tr>
         <tr>
@@ -137,30 +100,27 @@
         	<td colspan=4></td>
   		</tr>
         <tr align=center>
-            <td onMouseOver="this.style.cursor='pointer'; title='The Little Kings Movement. Brightening up the lives of people with disabilities.'" onclick="togglePopup()"><img src=LKM.png alt="The Little Kings Movement" width=100%></td>
-            <td onMouseOver="this.style.cursor='pointer'; title='YWCA Australia'" onclick="togglePopup()"><img src=YWCA.png alt="YWCA Australia" width=60%></td>
-            <td onMouseOver="this.style.cursor='pointer'; title='DV Connect. Be heard. Be safe.'" onclick="togglePopup()"><img src=DVC.png alt="DV Connect" width=90%></td>
-            <td onMouseOver="this.style.cursor='pointer'; title='Womens Community Shelters. Safe. Secure. Supported. Equal.'" onclick="togglePopup()"><img src=WCS.png alt="Womens Community Shelters" width=60%></td>
+            <td onMouseOver="this.style.cursor='pointer'; title='The Little Kings Movement. Brightening up the lives of people with disabilities.'" onclick="openForm('LKM')"><img src=LKM.png alt="The Little Kings Movement" width=100%></td>
+            <td onMouseOver="this.style.cursor='pointer'; title='YWCA Australia'" onclick="openForm('YWCA')"><img src=YWCA.png alt="YWCA Australia" width=60%></td>
+            <td onMouseOver="this.style.cursor='pointer'; title='DV Connect. Be heard. Be safe.'" onclick="openForm('DVC')"><img src=DVC.png alt="DV Connect" width=90%></td>
+            <td onMouseOver="this.style.cursor='pointer'; title='Womens Community Shelters. Safe. Secure. Supported. Equal.'" onclick="openForm('WCS')"><img src=WCS.png alt="Womens Community Shelters" width=60%></td>
         </tr>
-        <tr align=center>
-            <td onMouseOver="this.style.cursor='pointer'; title='Australian Red Cross. The Power of Humanity.'" onclick="togglePopup()"><img src=ARC.png alt="Australian Red Cross" width=80%></td>
-            <td onMouseOver="this.style.cursor='pointer'; title='The Smith Family. Learn today, change tomorrow.'" onclick="togglePopup()"><img src=TSF.png alt="The Smith Family" width=70%></td>
-            <td onMouseOver="this.style.cursor='pointer'; title='Go Volunteer'" onclick="togglePopup()"><img src=GoVolunteer.png alt="GoVolunteer" width=110%></td>
-            <td onMouseOver="this.style.cursor='pointer'; title='Meals on Wheels Australia'" onclick="togglePopup()"><img src=MoW.png alt="Meals on Wheels Australia" width=80%></td>
+        <tr align=center><button onclick="openForm('Option 1')">Option 1</button>
+            <td onMouseOver="this.style.cursor='pointer'; title='Australian Red Cross. The Power of Humanity.'" onclick="openForm('ARC')"><img src=ARC.png alt="Australian Red Cross" width=80%></td>
+            <td onMouseOver="this.style.cursor='pointer'; title='The Smith Family. Learn today, change tomorrow.'" onclick="openForm('TSF')"><img src=TSF.png alt="The Smith Family" width=70%></td>
+            <td onMouseOver="this.style.cursor='pointer'; title='Go Volunteer'" onclick="openForm('GoVolunteer')"><img src=GoVolunteer.png alt="GoVolunteer" width=110%></td>
+            <td onMouseOver="this.style.cursor='pointer'; title='Meals on Wheels Australia'" onclick="openForm('MoW')"><img src=MoW.png alt="Meals on Wheels Australia" width=80%></td>
             
         </tr>
         <body>
 <!--Form 1-->
-            <div class="popup" id="popup-1">
-              <div class="content">
-               <div class="close-btn" onclick="togglePopup()">
-                ×</div>                
+            <div class="popup-form" id="popup-form">
+              <div class="popup-form-content">
+                <span class="close" onclick="closePopup()">&times;</span>                
            <h1>Volunteering your time!</h1> 
            <h2 id="popup-title"></h2>
-
-             <div class="input-field">
-                <form method=get action="shop.html">
-                <input type="hidden" name="action" value="MakePurchase">
+           <form>
+                <div class="input-field" name="CustName">
                     <label for="fname"></label>
                     <input type="text" id="fname" placeholder="First Name"><br><br>
                     <label for="lname"></label>
@@ -184,20 +144,29 @@
                     <option value=6>6 hours</option>
                     <option value=8>8 hours</option>
                   </select>
-                  <input type=hidden name=action value=AskTxtInput></form>
+                  <input type=hidden name=action value=AskTxtInput>
            </div>
            <br>
            <br>
            <input type="submit" value="Submit">
-               <p>Want to find out more? <a href="moreinfo.html">Click here!</a></p>                
+                </form>
+            <h2 id="popup-title"></h2>
+            <p>Want to find out more? <a href="moreinfo.html">Click here!</a></p>                
               </div>
              </div>
 
            <script>
-            function togglePopup() {
-            document.getElementById("popup-1")
-             .classList.toggle("active");
-           }
+            function openForm(title) {
+            document.getElementById('popup-form')
+             .classList.show("active");
+            document.getElementById('popup-title').innerHTML = title;
+			document.getElementById('popup-form').style.display = "block";
+		}
+
+		// Close the popup form
+		function closePopup() {
+			document.getElementById('popup-form').style.display = "none";
+		}
            </script>
         
            </body>

@@ -1,0 +1,40 @@
+<!--Form 1-->
+<div class="popup" id="popup-1">
+    <div class="content">
+     <div class="close-btn" onclick="togglePopup()">
+      ×</div>                
+ <h1>Volunteering your time!</h1> 
+
+   <div class="input-field">
+      <form method=get action="/action_page.php">
+          <label for="fname"></label>
+          <input type="text" id="fname" placeholder="First Name"><br><br>
+          <label for="lname"></label>
+          <input type="text" id="fname" placeholder="Surname"><br><br>
+      <h3>How regularly can you volunteer?</h3>
+      <select name="Regularity">
+          <option value="No Choice">Please make a selection</option>
+          <option value=Once>Once</option>
+          <option value=Weekly>Weekly</option>
+          <option value=Monthly>Monthly</option>
+          <option value=Quarterly>Quarterly</option>
+        </select>
+  </div>
+  <div class="input-field">
+      <h3>How many hours can you afford to give each time?</h3>
+      <select name="Hours">
+          <option value="No Choice">Please make a selection</option>
+          <option value=1>1 hour</option>
+          <option value=2>2 hours</option>
+          <option value=4>4 hours</option>
+          <option value=6>6 hours</option>
+          <option value=8>8 hours</option>
+        </select>
+        <input type=hidden name=action value=AskTxtInput></form>
+ </div>
+ <br>
+ <br>
+ <input type="submit" name="submit" id="submit" data-inline="true" value="Submit">
+     <p>Want to find out more? <a href="http://thelittlekingsmovement.org.au/index.php/volunteer-2/">The Little Kings Movement</a></p>                
+    </div>
+   </div>
