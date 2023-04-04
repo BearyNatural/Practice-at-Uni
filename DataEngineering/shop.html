@@ -137,16 +137,16 @@
         	<td colspan=4></td>
   		</tr>
         <tr align=center>
-            <td onMouseOver="this.style.cursor='pointer'; title='The Little Kings Movement. Brightening up the lives of people with disabilities.'" onclick="togglePopup()"><img src=LKM.png alt="The Little Kings Movement" width=100%></td>
-            <td onMouseOver="this.style.cursor='pointer'; title='YWCA Australia'" onclick="togglePopup()"><img src=YWCA.png alt="YWCA Australia" width=60%></td>
-            <td onMouseOver="this.style.cursor='pointer'; title='DV Connect. Be heard. Be safe.'" onclick="togglePopup()"><img src=DVC.png alt="DV Connect" width=90%></td>
-            <td onMouseOver="this.style.cursor='pointer'; title='Womens Community Shelters. Safe. Secure. Supported. Equal.'" onclick="togglePopup()"><img src=WCS.png alt="Womens Community Shelters" width=60%></td>
+            <td onMouseOver="this.style.cursor='pointer'; title='The Little Kings Movement. Brightening up the lives of people with disabilities.'" name=title onclick="togglePopup()"><img src=LKM.png alt="The Little Kings Movement" width=100%></td>
+            <td onMouseOver="this.style.cursor='pointer'; title='YWCA Australia'" name=title onclick="togglePopup()"><img src=YWCA.png alt="YWCA Australia" width=60%></td>
+            <td onMouseOver="this.style.cursor='pointer'; title='DV Connect. Be heard. Be safe.'" name=title onclick="togglePopup()"><img src=DVC.png alt="DV Connect" width=90%></td>
+            <td onMouseOver="this.style.cursor='pointer'; title='Womens Community Shelters. Safe. Secure. Supported. Equal.'" name=title onclick="togglePopup()"><img src=WCS.png alt="Womens Community Shelters" width=60%></td>
         </tr>
         <tr align=center>
-            <td onMouseOver="this.style.cursor='pointer'; title='Australian Red Cross. The Power of Humanity.'" onclick="togglePopup()"><img src=ARC.png alt="Australian Red Cross" width=80%></td>
-            <td onMouseOver="this.style.cursor='pointer'; title='The Smith Family. Learn today, change tomorrow.'" onclick="togglePopup()"><img src=TSF.png alt="The Smith Family" width=70%></td>
-            <td onMouseOver="this.style.cursor='pointer'; title='Go Volunteer'" onclick="togglePopup()"><img src=GoVolunteer.png alt="GoVolunteer" width=110%></td>
-            <td onMouseOver="this.style.cursor='pointer'; title='Meals on Wheels Australia'" onclick="togglePopup()"><img src=MoW.png alt="Meals on Wheels Australia" width=80%></td>
+            <td onMouseOver="this.style.cursor='pointer'; title='Australian Red Cross. The Power of Humanity.'" name=title onclick="togglePopup()"><img src=ARC.png alt="Australian Red Cross" width=80%></td>
+            <td onMouseOver="this.style.cursor='pointer'; title='The Smith Family. Learn today, change tomorrow.'" name=title onclick="togglePopup()"><img src=TSF.png alt="The Smith Family" width=70%></td>
+            <td onMouseOver="this.style.cursor='pointer'; title='Go Volunteer'" name=title onclick="togglePopup()"><img src=GoVolunteer.png alt="GoVolunteer" width=110%></td>
+            <td onMouseOver="this.style.cursor='pointer'; title='Meals on Wheels Australia'" name=title onclick="togglePopup()"><img src=MoW.png alt="Meals on Wheels Australia" width=80%></td>
             
         </tr>
         <body>
@@ -155,41 +155,40 @@
               <div class="content">
                <div class="close-btn" onclick="togglePopup()">
                 ×</div>                
-           <h1>Volunteering your time!</h1> 
-           <h2 id="popup-title"></h2>
+           <h1>Volunteering your time at!</h1> 
 
            <form method=get action="shop.html">
 		   <div class="input-field" name="CustName">
                     <label for="fname"></label>
-                    <input type="text" id="fname" placeholder="First Name"><br><br>
+                    <input type="text" name="fname" placeholder="First Name" required><br><br>
                     <label for="lname"></label>
-                    <input type="text" id="fname" placeholder="Surname"><br><br>
+                    <input type="text" name="sname" placeholder="Surname" required><br><br>
 		    <input type=hidden name=action value=AskTxtInput>
                 <h3>How regularly can you volunteer?</h3>
-                <select name="Regularity">
-                    <option value="No Choice">Please make a selection</option>
-                    <option value=Once>Once</option>
-                    <option value=Weekly>Weekly</option>
-                    <option value=Monthly>Monthly</option>
-                    <option value=Quarterly>Quarterly</option>
+                <select name="Regularity" id="Regularity" required>
+                    <option value="">Please make a selection</option>
+                    <option name="Regularity" value=Once>Once</option>
+                    <option name="Regularity" value=Weekly>Weekly</option>
+                    <option name="Regularity" value=Monthly>Monthly</option>
+                    <option name="Regularity" value=Quarterly>Quarterly</option>
                   </select>
             </div>
             <div class="input-field">
                 <h3>How many hours can you afford to give each time?</h3>
-                <select name="Hours">
-                    <option value="No Choice">Please make a selection</option>
-                    <option value=1>1 hour</option>
-                    <option value=2>2 hours</option>
-                    <option value=4>4 hours</option>
-                    <option value=6>6 hours</option>
-                    <option value=8>8 hours</option>
+                <select name="Hours" id="Hours" required>
+                    <option value="">Please make a selection</option>
+                    <option name="Hours" value="1 hour">1 hour</option>
+                    <option name="Hours" value="2 hours">2 hours</option>
+                    <option name="Hours" value="4 hours">4 hours</option>
+                    <option name="Hours" value="6 hours">6 hours</option>
+                    <option name="Hours" value="8 hours">8 hours</option>
                   </select>
            </div>
            <br>
            <br>
            <input type="submit" name="submit" id="submit" data-inline="true" value="Submit">
    	</form>
-               <p>Want to find out more? <a href="moreinfo.html">Click here!</a></p>                
+               <p>Want to find out more? <a href="moreinfo.html" target="_blank">Click here!</a></p>                
               </div>
              </div>
 

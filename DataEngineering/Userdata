@@ -4,6 +4,7 @@ sudo apt update
 sudo apt upgrade -y 
 
 sudo apt install apache2 -y
+sudo apt install php -y
 sudo systemctl enable apache2
 sudo systemctl start apache2
 sudo ufw enable
