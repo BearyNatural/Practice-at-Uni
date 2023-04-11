@@ -52,8 +52,8 @@
             top: 50%;
             left: 50%;
             transform: translate(-50%,-150%) scale(0);
-            width: 350px;
-            height: 430px;
+            width: 400px;
+            height: 500px;
             z-index: 2;
             text-align: center;
             padding: 10px;
@@ -106,25 +106,25 @@
         	<td colspan=4></td>
   		</tr>
         <tr align=center>
-            <td onMouseOver="this.style.cursor='pointer'; title='The Little Kings Movement. Brightening up the lives of people with disabilities.'" name=title onclick="togglePopup()"><img src=LKM.png alt="The Little Kings Movement" width=100%></td>
-            <td onMouseOver="this.style.cursor='pointer'; title='YWCA Australia'" name=title onclick="togglePopup()"><img src=YWCA.png alt="YWCA Australia" width=60%></td>
-            <td onMouseOver="this.style.cursor='pointer'; title='DV Connect. Be heard. Be safe.'" name=title onclick="togglePopup()"><img src=DVC.png alt="DV Connect" width=90%></td>
-            <td onMouseOver="this.style.cursor='pointer'; title='Womens Community Shelters. Safe. Secure. Supported. Equal.'" name=title onclick="togglePopup()"><img src=WCS.png alt="Womens Community Shelters" width=60%></td>
+            <td onMouseOver="this.style.cursor='pointer'; title='The Little Kings Movement. Brightening up the lives of people with disabilities.'" name=title onclick="togglePopup('The Little Kings Movement')"><img src=LKM.png alt="The Little Kings Movement" width=100%></td>
+            <td onMouseOver="this.style.cursor='pointer'; title='YWCA Australia'" name=title onclick="togglePopup('YWCA Australia')"><img src=YWCA.png alt="YWCA Australia" width=60%></td>
+            <td onMouseOver="this.style.cursor='pointer'; title='DV Connect. Be heard. Be safe.'" name=title onclick="togglePopup('DV Connect')"><img src=DVC.png alt="DV Connect" width=90%></td>
+            <td onMouseOver="this.style.cursor='pointer'; title='Womens Community Shelters. Safe. Secure. Supported. Equal.'" name=title onclick="togglePopup('Womens Community Shelters')"><img src=WCS.png alt="Womens Community Shelters" width=60%></td>
         </tr>
         <tr align=center>
-            <td onMouseOver="this.style.cursor='pointer'; title='Australian Red Cross. The Power of Humanity.'" name=title onclick="togglePopup()"><img src=ARC.png alt="Australian Red Cross" width=80%></td>
-            <td onMouseOver="this.style.cursor='pointer'; title='The Smith Family. Learn today, change tomorrow.'" name=title onclick="togglePopup()"><img src=TSF.png alt="The Smith Family" width=70%></td>
-            <td onMouseOver="this.style.cursor='pointer'; title='Go Volunteer'" name=title onclick="togglePopup()"><img src=GoVolunteer.png alt="GoVolunteer" width=110%></td>
-            <td onMouseOver="this.style.cursor='pointer'; title='Meals on Wheels Australia'" name=title onclick="togglePopup()"><img src=MoW.png alt="Meals on Wheels Australia" width=80%></td>
+            <td onMouseOver="this.style.cursor='pointer'; title='Australian Red Cross. The Power of Humanity.'" name=title onclick="togglePopup('Australian Red Cross')"><img src=ARC.png alt="Australian Red Cross" width=80%></td>
+            <td onMouseOver="this.style.cursor='pointer'; title='The Smith Family. Learn today, change tomorrow.'" name=title onclick="togglePopup('The Smith Family')"><img src=TSF.png alt="The Smith Family" width=70%></td>
+            <td onMouseOver="this.style.cursor='pointer'; title='Go Volunteer'" name=title onclick="togglePopup('Go Volunteer')"><img src=GoVolunteer.png alt="GoVolunteer" width=110%></td>
+            <td onMouseOver="this.style.cursor='pointer'; title='Meals on Wheels Australia'" name=title onclick="togglePopup('Meals on Wheels Australia')"><img src=MoW.png alt="Meals on Wheels Australia" width=80%></td>
             
         </tr>
         <body>
 <!--Form 1-->
             <div class="popup" id="popup-1">
               <div class="content">
-               <div class="close-btn" onclick="togglePopup()">
+               <div class="close-btn" onclick="togglePopup(title)">
                 ×</div>                
-           <h1>Volunteering your time at!</h1> 
+           <h1>Volunteering your time!</h1> 
 
            <form method=get action="shop.html">
 		   <div class="input-field" name="CustName">
@@ -162,7 +162,7 @@
              </div>
 
 <script>
-    function togglePopup() {
+    function togglePopup(title) {
     document.getElementById("popup-1")
         .classList.toggle("active");
     }
