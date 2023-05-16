@@ -127,56 +127,56 @@
         <body>
 <!--Form 1-->
             <div class="popup" id="popup">
-              <div class="content" id="popup">
+                <div class="content" id="popup">
                <div class="close-btn" onclick="togglePopup()">
                 ×</div>                
            <h1>Volunteering your time!</h1> 
-		   <h2 id="popupTitle"></h2>
+           <h2 id="popupTitle"></h2>
 
-           <form method=get action="shop.html">
-		   <div class="input-field" name="CustName">
-                    <label for="fname"></label>
-                    <input type="text" name="fname" placeholder="First Name" required><br><br>
-                    <label for="sname"></label>
-                    <input type="text" name="sname" placeholder="Surname" required><br><br>
-		    <input type=hidden name=action value=AskTxtInput>
-                <h3>How regularly can you volunteer?</h3>
-                <select name="Regularity" id="Regularity" required>
-                    <option value="">Please make a selection</option>
-                    <option name="Regularity" value=Once>Once</option>
-                    <option name="Regularity" value=Weekly>Weekly</option>
-                    <option name="Regularity" value=Monthly>Monthly</option>
-                    <option name="Regularity" value=Quarterly>Quarterly</option>
-                  </select>
+           <form method=get action="confirmation.html">
+            <div class="input-field" name="CustName">
+                     <label for="fname"></label>
+                     <input type="text" name="fname" placeholder="First Name" required><br><br>
+                     <label for="lname"></label>
+                     <input type="text" name="sname" placeholder="Surname" required><br><br>
+             <input type=hidden name=choice value=title>
+                 <h3>How regularly can you volunteer?</h3>
+                 <select name="Regularity" id="Regularity" required>
+                     <option value="">Please make a selection</option>
+                     <option value=once>Once</option>
+                     <option value=weekly>Weekly</option>
+                     <option value=monthly>Monthly</option>
+                     <option value=quarterly>Quarterly</option>
+                   </select>
+             </div>
+             <div class="input-field">
+                 <h3>How many hours can you afford to give each time?</h3>
+                 <select name="Hours" id="Hours" required>
+                     <option value="">Please make a selection</option>
+                     <option value=1>1 hour</option>
+                     <option value=2>2 hours</option>
+                     <option value=4>4 hours</option>
+                     <option value=6>6 hours</option>
+                     <option value=8>8 hours</option>
+                   </select>
             </div>
-            <div class="input-field">
-                <h3>How many hours can you afford to give each time?</h3>
-                <select name="Hours" id="Hours" required>
-                    <option value="">Please make a selection</option>
-                    <option name="Hours" value="1 hour">1 hour</option>
-                    <option name="Hours" value="2 hours">2 hours</option>
-                    <option name="Hours" value="4 hours">4 hours</option>
-                    <option name="Hours" value="6 hours">6 hours</option>
-                    <option name="Hours" value="8 hours">8 hours</option>
-                  </select>
-           </div>
            <br>
            <br>
-           <input type="button" name="submit" id="submit" data-inline="true" value="Confirm">
+           <input type="submit" name="submit" id="submit" data-inline="true" value="Confirm">
    	</form>
                <p>Want to find out more? <a href="moreinfo.html" target="_blank">Click here!</a></p>                
               </div>
              </div>
 
-<script>
-    function togglePopup(title) {
-	// Show the popup
-		document.getElementById("popup")
-		.classList.toggle("active");
-	// Set the popup title
-		document.getElementById("popupTitle").innerHTML = title;
-    }
-</script>
+             <script>
+                function togglePopup(title) {
+                // Show the popup
+                    document.getElementById("popup")
+                    .classList.toggle("active");
+                // Set the popup title
+                    document.getElementById("popupTitle").innerHTML = title;
+                }
+            </script>
         
            </body>
 

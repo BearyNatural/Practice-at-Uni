@@ -86,7 +86,7 @@
     </style> 
     
     <body style="background-color:#c5e8ed; background-image: url('sunflowers.png'); background-repeat: no-repeat; background-size: cover;" height="100%">
-<body>
+
 <br>
 <p style="text-align:right; padding-right: 30;"><a href="index.html">&lt;&lt; Back</a></div></p>
 <br>
@@ -96,53 +96,33 @@
         </tr>
         <tr>
         	<td width=20% align=center></td>
-            <td width=20% align=center style="font-family: Sans-Serif; font-size: 20; font-weight: bold; color: #FFFFFFF;"></td>
+            <td width=20% align=center style="font-family: Sans-Serif; font-size: 20; font-weight: bold; color: #FFFFFFF;">  </a></td>
             <td width=20% align=center></td>
         </tr>
         <tr>
-            <th colspan=3 height=80% align=center style="font-family: Sans-Serif; font-size: 32; font-weight: bold;" id="message"></th>
-        </tr> 
+            <td colspan=3 height=80% align=center><em>Thank you <?php echo $_GET['CustName'] ?> for volunteering <?php echo $_GET['Hours'] ?>, <?php echo $_GET['Regularity'] ?> at <?php echo $_GET['title'] ?></em></td>
+        </tr>
         <br>
         <tr>
 
 <table border=0 cellspacing=5 cellpadding=5 align=center width=65%>
       	<tr>
-        	<td colspan=1></td>
+        	<td colspan=4></td>
   		</tr>
         <tr align=center>
-
-            <td onMouseOver="title"><a href="link" target="_blank"><img src=image alt="title" width=100%></a></td>
-
+            <td onMouseOver="title='The Little Kings Movement. Brightening up the lives of people with disabilities.'"><a href="http://thelittlekingsmovement.org.au/index.php/volunteer-2/" target="_blank"><img src=LKM.png alt="The Little Kings Movement" width=100%></a></td>
+            <td onMouseOver="title='YWCA Australia'"><a href="https://www.ywca.org.au/volunteer/" target="_blank"><img src=YWCA.png alt="YWCA Australia" width=60%></a></td>
+            <td onMouseOver="title='DV Connect. Be heard. Be safe.'"><a href="https://www.dvconnect.org/womensline/help-for-others/" target="_blank"><img src=DVC.png alt="DV Connect" width=90%></a></td>
+            <td onMouseOver="title='Womens Community Shelters. Safe. Secure. Supported. Equal.'"><a href="https://www.womenscommunityshelters.org.au/" target="_blank"><img src=WCS.png alt="Womens Community Shelters" width=60%></a></td>
         </tr>
-    </body>
-<script>
-    const urlParams = new URLSearchParams(window.location.search);
-    const fname = urlParams.get('fname');
-    const sname = urlParams.get('sname');
-    const Regularity = urlParams.get('Regularity');
-    const Hours = urlParams.get('Hours');
-    const choice = urlParams.get('choice');
+        <tr align=center>
+            <td onMouseOver="title='Australian Red Cross. The Power of Humanity.'"><a href="https://www.redcross.org.au/volunteer/" target="_blank"><img src=ARC.png alt="Australian Red Cross" width=80%></a></td>
+            <td onMouseOver="title='The Smith Family. Learn today, change tomorrow.'"><a href="https://www.thesmithfamily.com.au/get-involved/volunteer" target="_blank"><img src=TSF.png alt="The Smith Family" width=70%></a></td>
+            <td onMouseOver="title='Go Volunteer'"><a href="https://govolunteer.com.au/" target="_blank"><img src=GoVolunteer.png alt="GoVolunteer" width=110%></a></td>
+            <td onMouseOver="title='Meals on Wheels Australia'"><a href="https://mealsonwheels.org.au/get-involved/volunteer/" target="_blank"><img src=MoW.png alt="Meals on Wheels Australia" width=80%></a></td>
+            
+        </tr>
 
-    const message = `Thank you ${fname} ${sname} for volunteering your time ${Regularity} for ${Hours} hours!`;
-
-    document.getElementById('message').innerHTML = message;
-    document.getElementById('choice').innerHTML = choice;
-
-    function displayImage() {
-        var selectBox = document.getElementById("choice");
-        var selectedValue = selectBox.options[selectBox.selectedIndex].value;
-        var img = document.getElementById("displayImg");
-        if(selectedValue == "The Little Kings Movement") {
-            img.src="LKM.png"; alt="The Little Kings Movement. Brightening up the lives of people with disabilities.";
-        } else if(selectedValue == "YWCA Australia") {
-            img.src="YWCA.png"; alt="YWCA Australia";
-        } else if(selectedValue == "Meals on Wheels Australia") {
-            img.src="MoW.png"; alt="Meals on Wheels Australia";
-        } else {
-            img.src="";
-        }
-    }
-</script>
 
            
 
