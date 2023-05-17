@@ -1,8 +1,6 @@
+<!DOCTYPE html>
 <html>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-	<head> 
-    	<title>Confirmation Page</title>
-	</head>
+
     <style>
         a {
             font-size: 15px;
@@ -44,8 +42,9 @@
         .popup-form {
             position: relative;
             display: inline-block;
-            cursor: pointer; 
-            transition: box-shadow .35s ease !important;   
+			overflow: auto;
+            transition: box-shadow .35s ease !important;  
+            cursor: pointer;  
         }
         .popup-form:active {
             background-color: #c5e8ed;
@@ -57,8 +56,8 @@
             top: 50%;
             left: 50%;
             transform: translate(-50%,-150%) scale(0);
-            width: 350px;
-            height: 430px;
+            width: 400px;
+            height: 600px;
             z-index: 2;
             text-align: center;
             padding: 10px;
@@ -72,78 +71,65 @@
         }
         .popup .close-btn {
             position: absolute;
-            right: 20px;
-            top: 20px;
-            width: 30px;
-            height: 30px;
+            right: 10px;
+            top: 10px;
+            width: 20px;
+            height: 20px;
             color: white;
-            font-size: 30px;
+            font-size: 20px;
             border-radius: 50%;
             padding: 2px 5px 7px 5px;
             background: #237be6;
-            cursor: pointer;        
-        }
-    </style> 
+            cursor: pointer; 
+        } 
+    </style>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    	<title>Confirmation Page</title>
+	</head>
+ 
     
     <body style="background-color:#c5e8ed; background-image: url('sunflowers.png'); background-repeat: no-repeat; background-size: cover;" height="100%">
-<body>
-<br>
-<p style="text-align:right; padding-right: 30;"><a href="index.html">&lt;&lt; Back</a></div></p>
-<br>
-<table border=0 width=90% height=20% align=center cellspacing="1" cellpadding="5" sytle="font-weight: bold; color: #FFFFFFF;">
-    	<tr>
-        	<th colspan=3><h1> Prioritising what counts! </h1></th>
-        </tr>
-        <tr>
-        	<td width=20% align=center></td>
-            <td width=20% align=center style="font-family: Sans-Serif; font-size: 20; font-weight: bold; color: #FFFFFFF;"></td>
-            <td width=20% align=center></td>
-        </tr>
-        <tr>
-            <th colspan=3 height=80% align=center style="font-family: Sans-Serif; font-size: 32; font-weight: bold;" id="message"></th>
-        </tr> 
-        <br>
-        <tr>
+        <p style="text-align:right; padding-right: 30;"><a href="index.html">&lt;&lt; Back</a></p>
+        <table border=0 width=90% height=20% align=center cellspacing="1" cellpadding="5" sytle="font-weight: bold; color: #FFFFFF;">
+            <tr>
+                <th colspan=3><h1> Prioritising what counts! </h1></th>
+            </tr>
+            <tr>
+                <td width=20% align=center></td>
+                <td width=20% align=center style="font-family: Sans-Serif; font-size: 20; font-weight: bold; color: black;">  </td>
+                <td width=20% align=center></td>
+            </tr>
+            <tr>
+                <th colspan=3 height=80% align=center style="font-family: Sans-Serif; font-size: 32; font-weight: bold;" id="message"></th>
+            </tr>
+        </table>
+        <table border=0 cellspacing=5 cellpadding=5 align=center width=65%>
+            <tr>
+                <td colspan=4></td>
+            </tr>
+            <tr align=center>
+                <td img id="organisation" src="" alt=""></td>
+            </tr>
+        </table>
 
-<table border=0 cellspacing=5 cellpadding=5 align=center width=65%>
-      	<tr>
-        	<td colspan=1></td>
-  		</tr>
-        <tr align=center>
+    <script>
+        var urlParams = new URLSearchParams(window.location.search);
+        var fname = urlParams.get('fname');
+        var sname = urlParams.get('sname');
+        var Regularity = urlParams.get('Regularity');
+        var Hours = urlParams.get('Hours');
+        var choice = urlParams.get('organisation');
 
-            <td onMouseOver="title"><a href="link" target="_blank"><img src=image alt="title" width=100%></a></td>
+        var message = `Thank you ${fname} ${sname} for volunteering your time ${Regularity} for ${Hours} hours!`;
 
-        </tr>
-    </body>
-<script>
-    const urlParams = new URLSearchParams(window.location.search);
-    const fname = urlParams.get('fname');
-    const sname = urlParams.get('sname');
-    const Regularity = urlParams.get('Regularity');
-    const Hours = urlParams.get('Hours');
-    const choice = urlParams.get('choice');
+        document.getElementById('message').innerHTML = message;
+        document.getElementById('organisation').innerHTML = organisation;
 
-    const message = `Thank you ${fname} ${sname} for volunteering your time ${Regularity} for ${Hours} hours!`;
-
-    document.getElementById('message').innerHTML = message;
-    document.getElementById('choice').innerHTML = choice;
-
-    function displayImage() {
-        var selectBox = document.getElementById("choice");
-        var selectedValue = selectBox.options[selectBox.selectedIndex].value;
-        var img = document.getElementById("displayImg");
-        if(selectedValue == "The Little Kings Movement") {
-            img.src="LKM.png"; alt="The Little Kings Movement. Brightening up the lives of people with disabilities.";
-        } else if(selectedValue == "YWCA Australia") {
-            img.src="YWCA.png"; alt="YWCA Australia";
-        } else if(selectedValue == "Meals on Wheels Australia") {
-            img.src="MoW.png"; alt="Meals on Wheels Australia";
-        } else {
-            img.src="";
-        }
-    }
-</script>
-
+        const imgElement = document.getElementById('myImage');
+        
+    </script>
+</body> 
            
 
 <!-- BEGIN Client Footer -->
