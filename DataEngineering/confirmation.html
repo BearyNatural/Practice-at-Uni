@@ -90,7 +90,9 @@
  
     
     <body style="background-color:#c5e8ed; background-image: url('sunflowers.png'); background-repeat: no-repeat; background-size: cover;" height="100%">
-        <p style="text-align:right; padding-right: 30;"><a href="index.html">&lt;&lt; Back</a></p>
+        <br>
+        <p style="text-align:right; padding-right: 30;"><a href="shop.html">&lt;&lt; Back</a></p>
+        <br>
         <table border=0 width=90% height=20% align=center cellspacing="1" cellpadding="5" sytle="font-weight: bold; color: #FFFFFF;">
             <tr>
                 <th colspan=3><h1> Prioritising what counts! </h1></th>
@@ -101,15 +103,19 @@
                 <td width=20% align=center></td>
             </tr>
             <tr>
-                <th colspan=3 height=80% align=center style="font-family: Sans-Serif; font-size: 32; font-weight: bold;" id="message"></th>
+                <th colspan=3 height=120% align=center style="font-family: Sans-Serif; font-size: 50; font-weight: bold;" id="message"></th>
             </tr>
         </table>
+        <br>
+        <br>
+        <br>
         <table border=0 cellspacing=5 cellpadding=5 align=center width=65%>
             <tr>
                 <td colspan=4></td>
             </tr>
-            <tr align=center>
-                <td img id="organisation" src="" alt=""></td>
+            <tr>
+                <td align=center>
+                <a href="imagelink" id="imagelink" target="_blank" ><img id="image" alt="" style="display: block; margin: 0 auto;"></a></td>
             </tr>
         </table>
 
@@ -120,14 +126,59 @@
         var Regularity = urlParams.get('Regularity');
         var Hours = urlParams.get('Hours');
         var choice = urlParams.get('organisation');
+        console.log('organisation: ' + choice)
 
         var message = `Thank you ${fname} ${sname} for volunteering your time ${Regularity} for ${Hours} hours!`;
 
         document.getElementById('message').innerHTML = message;
-        document.getElementById('organisation').innerHTML = organisation;
 
-        const imgElement = document.getElementById('myImage');
-        
+        var images = [
+			{
+            alt: "The Little Kings Movement",
+			src: "LKM.png",
+			href: "http://thelittlekingsmovement.org.au/index.php/volunteer-2/"},
+			{
+			alt: "YWCA Australia", 
+			src: "YWCA.png", 
+			href: "https://www.ywca.org.au/volunteer/"},
+			{
+			alt: "DV Connect", 
+			src: "DVC.png", 
+			href: "https://www.dvconnect.org/womensline/help-for-others/"},
+			{
+			alt: "Womens Community Shelters", 
+			src: "WCS.png", 
+			href: "https://www.womenscommunityshelters.org.au/"},
+			{
+			alt: "Australian Red Cross", 
+			src: "ARC.png", 
+			href: "https://www.redcross.org.au/volunteer/"},
+			{
+			alt: "The Smith Family", 
+			src: "TSF.png", 
+			href: "https://www.thesmithfamily.com.au/get-involved/volunteer"},
+			{
+			alt: "Go Volunteer", 
+			src: "GoVolunteer.png", 
+			href: "https://govolunteer.com.au/"},
+			{
+			alt: "Meals on Wheels Australia", 
+			src: "MoW.png", 
+			href: "https://mealsonwheels.org.au/get-involved/volunteer/"},
+		]
+        console.log('entering for loop')
+        for (var org of images) {
+            console.log('org.alt: ' + org.alt)
+            if (org.alt == choice) {
+                console.log('inside if statement')
+                var img = document.getElementById('image');
+                img.src = org.src;
+                var imlink = document.getElementById('imagelink');
+                imlink.href = org.href
+                break;
+            }
+        }
+        console.log('outside for loop')   
     </script>
 </body> 
            
